@@ -1,4 +1,4 @@
-# Projeto 3 - DAG Airflow
+# Projeto1 - DAG Airflow
 
 # Este pipeline carrega os dados da fonte (arquivo JSON), aplica as transformações, salva em formato CSV e insere no DW.
 
@@ -211,7 +211,7 @@ def func_insert_fact():
 
 
 # DAG para executação no Airflow
-with DAG(dag_id = 'DAG_Projeto3', start_date = pendulum.datetime(2022, 1, 1, tz = "UTC"), schedule_interval = '@Daily', catchup = False) as dag:
+with DAG(dag_id = 'DAG_Projeto1', start_date = pendulum.datetime(2022, 1, 1, tz = "UTC"), schedule_interval = '@Daily', catchup = False) as dag:
 
     # Tarefa de carga de dados
     task1_carrega_dados = PythonOperator(
