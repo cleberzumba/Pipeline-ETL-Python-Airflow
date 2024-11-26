@@ -194,7 +194,7 @@ def func_insert_fact():
     # Query para insert na tabela fato
     sql = "INSERT INTO tb_fact(pricesrange_id, hotels_id, reviews_id, number_of_hotels, number_ofrange_prices, max_hotelclass, min_hotelclass, " \
           "max_ofreviews, min_ofreviews) select tb_prices_rang.id, tb_hotels.id, tb_hotel_reviews.id, count(name), count(pricerange), max(hotelclass), min(hotelclass), " \
-          "max(numberofreviews), min(numberofreviews) FROM tb_prices_rang, tb_hotels, tb_hotel_reviews GROUP BY tb_prices_rang.id, tb_hotels.id, tb_hotel_reviews.id; "
+          "max(numberofreviews), min(numberofreviews) FROM tb_prices_rang JOIN tb_hotels ON tb_prices_rang.id = tb_hotels.pricesrange_id JOIN tb_hotel_reviews ON tb_hotels.id = tb_hotel_reviews.hotels_id GROUP BY tb_prices_rang.id, tb_hotels.id, tb_hotel_reviews.id;"
 
     # Executa a query
     conn_dw.cursor.execute(sql)
