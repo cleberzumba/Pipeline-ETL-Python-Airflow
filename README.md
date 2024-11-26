@@ -26,6 +26,8 @@
 
 
 
+
+
 => Componentes Principais:
 
 1. Funções Python
@@ -52,6 +54,7 @@
 
 		- Agrega dados das tabelas dimensionais para inserir na tabela fato.
 		- Calcula métricas como o número de hotéis, máximos e mínimos de classe e número de avaliações.
+
 
 
 
@@ -95,6 +98,7 @@ Tarefas da DAG:
 	7. task7_insert_fact:
 
 		- Insere os dados na tabela fato com agregações.
+
 
 
 
