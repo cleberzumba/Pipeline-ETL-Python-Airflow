@@ -1,6 +1,6 @@
 
 
-# Este código define um pipeline de dados no Airflow, estruturado como uma DAG (Directed Acyclic Graph), que processa um arquivo JSON contendo informações de hotéis, aplica transformações nos dados, grava resultados intermediários em arquivos CSV e os carrega em um Data Warehouse (DW):
+## Este código define um pipeline de dados no Airflow, estruturado como uma DAG (Directed Acyclic Graph), que processa um arquivo JSON contendo informações de hotéis, aplica transformações nos dados, grava resultados intermediários em arquivos CSV e os carrega em um Data Warehouse (DW):
 
 
 => O que o pipeline faz:
